@@ -1,0 +1,59 @@
+<html>
+  <head>
+	<title>Arithmetic Calculations Using PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  
+  <style>
+    input[type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #4c4faf;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    p {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+
+
+  <body>
+	<form onsubmit="return false">
+		<label for="a">Enter the 1st Number....</label><br>
+		<input type="number" id="a" /><br>
+		<label for="b">Enter the 2nd Number....</label><br>
+		<input type="number" id="b" /><br>
+		<input pys-onClick="sub" type="submit" id="btn-form" value="submit">
+	</form>
+	
+	<p>Addition Value:</p>
+	<p type="number" id="add"></p>
+	<py-script>
+		def sub(*args,**kwargs):
+			aa=Element('add')
+			aa.write(Element('a').value + Element('b').value)
+    </py-script>
+  </body>
+</html>
